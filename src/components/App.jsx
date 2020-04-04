@@ -1,25 +1,16 @@
 // @ts-check
 
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
 
-const ChannelList = (props) => {
-  const { channels: { channels } } = props;
 
-  return (
-    <div>
-      {channels.map(({ id, name }) => <div key={id}>{name}</div>)}
-    </div>
-  );
-};
+const Channels = ({ channels }) => (
+  <ul>
+    {channels.map(({ id, name }) => <li key={id}>{name}</li>)}
+  </ul>
+);
 
 export default (channels) => {
   const mountNode = document.getElementById('chat');
-
-  render(
-    <div>
-      <ChannelList channels={channels} />
-    </div>,
-    mountNode,
-  );
+  ReactDOM.render(<Channels channels={channels} />, mountNode);
 };
