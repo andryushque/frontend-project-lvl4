@@ -5,9 +5,11 @@ import ReactDOM from 'react-dom';
 
 
 const Channels = ({ channels }) => (
-  <ul>
-    {channels.map(({ id, name }) => <li key={id}>{name}</li>)}
-  </ul>
+  <div class="col-sm-3">
+    <ul class="list-group">
+      {channels.map(({ id, name }) => <li class="list-group-item" key={id}>{name}</li>)}
+    </ul>
+  </div>
 );
 
 export default (channels) => {
