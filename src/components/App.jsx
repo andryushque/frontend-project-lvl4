@@ -5,9 +5,9 @@ import ReactDOM from 'react-dom';
 
 
 const Channels = ({ channels }) => (
-  <div class="col-sm-3">
-    <ul class="list-group">
-      {channels.map(({ id, name }) => <li class="list-group-item" key={id}>{name}</li>)}
+  <div className="col-sm-3">
+    <ul className="list-group">
+      {channels.map(({ id, name }) => <li className="list-group-item" key={id}>{name}</li>)}
     </ul>
   </div>
 );
